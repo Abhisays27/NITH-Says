@@ -35,6 +35,7 @@ export default function Input() {
       profileImg: session.user.image,
       timestamp: serverTimestamp(),
       file: fileUrl,
+      fileType: fileType,
     });
 
 

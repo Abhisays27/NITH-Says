@@ -1,5 +1,7 @@
 import React from 'react'
 import Input from '@/components/Input'
+import Feed from '@/components/Feed'
+
 
 const page = () => {
   return (
@@ -8,6 +10,8 @@ const page = () => {
       <h2 className='text-lg sm:text-xl font-bold'>Home</h2>
     </div>
     <Input />
+    <Feed/>
+    
   </div>
     
   )
