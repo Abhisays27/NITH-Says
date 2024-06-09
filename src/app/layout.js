@@ -19,29 +19,38 @@ export default function RootLayout({ children }) {
   return (
   <SessionWrapper>
     <html lang="en">
-      <body className={inter.className}>
-        <div className="flex justify-between max-w-6xl mx-auto">
+  
+      <body className={inter.className} >
+    
+      <div className="main">
+            <div className="gradient"></div>
+      </div>
+        <div className="flex  max-w-7xl mx-auto  ">
        
-          <div className="hidden sm:inline border-r h-screen sticky top-0">
+       
+          <div className="hidden sm:inline h-screen sticky top-0 w-55">
             <Sidebar />
           </div>
-          <div className='w-2xl flex-1'>{children}</div>
-          <div className="lg:flex-col p-3 h-screen border-l hidden lg:flex w-[24rem]">
-          <div className='sticky top-0 bg-white py-2'>
+          <div className='w-5xl mx-auto '>{children}</div>
+          <div className="lg:flex-col p-3 h-screen hidden lg:flex w-[24rem] sticky top-0 overflow-y-auto scrollbar-hide  "> 
+          
+          <div className='sticky top-0  py-2'>
             <input
               type="text"
               placeholder="Search"
-              className="bg-gray-100 border border-gray-200 rounded-3xl text-sm w-full px-4 py-2"
+              className="bg-gray-100 border border-gray-300 rounded-3xl text-sm w-full px-4 py-2"
             ></input>
             </div>
-            <div className=" ">
+            <div className="">
             <News />
             </div>
+           
             
           </div>
         
         </div>
         <CommentModal/>
+      
       </body>
     </html>
     </SessionWrapper>

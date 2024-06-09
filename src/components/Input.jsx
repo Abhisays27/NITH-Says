@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import { HiOutlinePhotograph, HiOutlineVideoCamera } from 'react-icons/hi';
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { app } from '../firebase';
+
 import {
   addDoc,
   collection,
@@ -93,7 +94,7 @@ export default function Input() {
   if (!session) return null;
 
   return (
-    <div className='flex border-b border-gray-200 p-3 space-x-3 w-full'>
+    <div className='flex border-b border-gray-300  p-3 space-x-3 w-full'>
       <img
         src={session.user.image}
         alt='user-img'
@@ -101,7 +102,7 @@ export default function Input() {
       />
       <div className='w-full divide-y divide-gray-200'>
         <textarea
-          className='w-full border-none outline-none tracking-wide min-h-[50px] text-gray-700'
+          className='w-full border border-gray-300 rounded-lg outline-none tracking-wide min-h-[50px] text-gray-700 search_input p-3 bg-white bg-opacity-75 focus:outline-none focus:border-transparent shadow-lg resize-y'
           placeholder='Whats on your mind?'
           rows='2'
           value={text}
