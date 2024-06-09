@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <div className="flex justify-between max-w-6xl mx-auto">
        
-          <div className="hidden sm:inline border-r h-screen">
+          <div className="hidden sm:inline border-r h-screen sticky top-0">
             <Sidebar />
           </div>
           <div className='w-2xl flex-1'>{children}</div>
@@ -31,7 +31,10 @@ export default function RootLayout({ children }) {
               className="bg-gray-100 border border-gray-200 rounded-3xl text-sm w-full px-4 py-2"
             ></input>
             </div>
+            <div className=" ">
             <News />
+            </div>
+            
           </div>
         
         </div>

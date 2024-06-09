@@ -18,7 +18,7 @@ export default function Input() {
   const [fileType, setFileType] = useState(null);
   const [selectedFile, setSelectedFile] = useState(null);
   const [fileUploading, setFileUploading] = useState(false);
-  const [text, setText] = useState(' ');
+  const [text, setText] = useState('');
   const [postLoading, setPostLoading] = useState(false); 
   const db = getFirestore(app);
 
@@ -99,7 +99,7 @@ export default function Input() {
       <div className='w-full divide-y divide-gray-200'>
         <textarea
           className='w-full border-none outline-none tracking-wide min-h-[50px] text-gray-700'
-          placeholder='Whats happening'
+          placeholder='Whats on your mind?'
           rows='2'
           value={text}
           onChange={(e) => setText(e.target.value)}  //capturing data
