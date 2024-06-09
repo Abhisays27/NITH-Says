@@ -12,6 +12,8 @@ export const metadata = {
   description: "Share Your Thoughts",
 };
 
+export const dynamic = 'force-dynamic';
+
 export default function RootLayout({ children }) {
   
   return (
