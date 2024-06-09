@@ -36,7 +36,7 @@ export default function Post({ post, id }) {
             </video>
           </Link>
         ))}
-        <Icons id ={id}/>
+       <Icons id={id} uid={post.uid} />
       </div>
     </div>
   );

@@ -36,6 +36,8 @@ export default function Input() {
       timestamp: serverTimestamp(),
       file: fileUrl,
       fileType: fileType,
+
+   
     });
 
 
@@ -43,6 +45,7 @@ export default function Input() {
     setText('');
     setFileUrl(null);
     setSelectedFile(null);
+    window.location.reload();
   };
 
   const addFileToPost = (e) => {
